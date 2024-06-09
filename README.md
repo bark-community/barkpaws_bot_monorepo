@@ -48,11 +48,23 @@ The BarkPaws "BarkSwap" Telegram bot is designed to provide an intuitive and use
 - **Transparency**: Clear tracking of funds and donations, ensuring trust and reliability.
 - **Enhanced Security**: Adopting the latest standards and practices to protect user assets and data.
 
+## Frameworks and Technologies Used
+
+- **Node.js**: JavaScript runtime for the server.
+- **Express**: Web framework for Node.js.
+- **Telegram Bot API**: Library for interacting with the Telegram Bot API.
+- **Axios**: Promise-based HTTP client for the browser and Node.js.
+- **MongoDB**: NoSQL database for storing user data and trade histories.
+- **i18next**: Internationalization framework for Node.js applications.
+- **dotenv**: Module for loading environment variables from a `.env` file.
+- **@solana/web3.js**: Solana JavaScript API for interacting with the Solana blockchain.
+
 ## Getting Started
 
 ### Prerequisites
-- Node.js
-- MongoDB
+- Node.js (v18 or later)
+- MongoDB (v4 or later)
+- Solana CLI
 - Telegram account
 
 ### Installation
@@ -133,6 +145,12 @@ Interact with the bot on Telegram by sending commands or using the inline menu. 
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your improvements.
+
+## References
+
+- [Telegram Bot API Documentation](https://core.telegram.org/bots/api): Official documentation for the Telegram Bot API, providing detailed information about available methods and parameters for building Telegram bots.
+- [Solana Documentation](https://docs.solana.com/): Official documentation for the Solana blockchain platform, offering resources for developers to build applications on Solana.
+- [MongoDB Documentation](https://docs.mongodb.com/): Official documentation for MongoDB, providing guidance on installation, setup, and usage of MongoDB database.
 
 ## License
 

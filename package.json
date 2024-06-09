@@ -4,9 +4,19 @@
   "description": "Project concept",
   "main": "index.js",
   "scripts": {
+    "start": "node bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "BARK Protocol",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.92.3",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "i18next": "^23.11.5",
+    "node.js": "^0.0.1-security",
+    "typescript": "^5.4.5"
+  }
 }
