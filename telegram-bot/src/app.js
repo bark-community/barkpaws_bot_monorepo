@@ -1,10 +1,21 @@
 import TelegramBot from 'node-telegram-bot-api';
+import i18n from 'i18next';
+import backend from 'i18next-fs-backend';
 
 // Replace 'bark_telegram_bot_token' with the actual bot token
 const token = 'bark_telegram_bot_token';
 
 // Create a new instance of TelegramBot
 const bot = new TelegramBot(token, { polling: true });
+
+// Load translations based on user's language preference
+i18n.use(backend).init({
+    lng: 'en',
+    fallbackLng: 'en',
+    backend: {
+        loadPath: 'locales/{{lng}}/translation.json'
+    }
+});
 
 // Store user states for multi-step interactions
 const userStates = new Map();
@@ -30,17 +41,23 @@ async function executeTokenSwap(fromToken, toToken, amount, walletAddress) {
     }
 }
 
+// Handle errors globally
+bot.on('polling_error', (error) => {
+    console.error('Polling error:', error);
+});
+
 // Handle the /start command
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     const firstName = msg.from.first_name;
-    bot.sendMessage(chatId, `Welcome to BarkPaws, ${firstName}! How can we assist you today?`);
+    bot.sendMessage(chatId, i18n.t('welcome_message', { username: firstName }));
+    console.log(`Received /start command from user ${msg.from.username}`);
 });
 
 // Handle the /help command
 bot.onText(/\/help/, (msg) => {
     const chatId = msg.chat.id;
-    bot.sendMessage(chatId, 'Here are the available commands:\n- /start\n- /help\n- /swap\n- /status\n- /support\n- /settings\n- /resources\n- /stake\n- /governance');
+    bot.sendMessage(chatId, i18n.t('help_message'));
 });
 
 // Handle the user's response to commands or multi-step interactions
@@ -56,14 +73,14 @@ bot.on('message', async (msg) => {
                 const { fromToken, toToken, amount, walletAddress } = currentState.data;
                 const swapResult = await executeTokenSwap(fromToken, toToken, amount, walletAddress);
                 if (swapResult.success) {
-                    bot.sendMessage(chatId, `Token swap successful! Transaction ID: ${swapResult.txId}`);
+                    bot.sendMessage(chatId, i18n.t('swap_success', { txId: swapResult.txId }));
                 } else {
-                    bot.sendMessage(chatId, `Failed to execute token swap: ${swapResult.error}`);
+                    bot.sendMessage(chatId, i18n.t('swap_failure', { error: swapResult.error }));
                 }
                 break;
             case 'status':
                 // Add logic for checking trade status with user's response
-                bot.sendMessage(chatId, 'Checking trade status...');
+                bot.sendMessage(chatId, i18n.t('status_prompt'));
                 break;
             // Add cases for other actions as needed
         }
@@ -75,9 +92,14 @@ bot.on('message', async (msg) => {
         const message = msg.text.toLowerCase();
         if (message.includes('/tokenswap')) {
             const [command, fromToken, toToken, amount, walletAddress] = message.split(' ');
+            // Validate amount for token swap
+            if (isNaN(amount) || amount <= 0) {
+                bot.sendMessage(chatId, i18n.t('invalid_amount'));
+                return;
+            }
             // Calculate swap fees with slippage tolerance
             const { minFee, maxFee } = calculateSwapFee(fromToken, toToken, amount);
-            bot.sendMessage(chatId, `Initiating token swap from ${fromToken} to ${toToken} for amount ${amount} to wallet address ${walletAddress}. Estimated fees: Min: ${minFee}, Max: ${maxFee}`);
+            bot.sendMessage(chatId, i18n.t('swap_confirmation', { amount, fromToken, toToken, walletAddress }));
             // Save user state for token swap
             userStates.set(chatId, { action: 'swap', data: { fromToken, toToken, amount, walletAddress } });
         }

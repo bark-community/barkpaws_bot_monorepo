@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import { executeTokenSwap, calculateSwapFee } from './swapService';
+import { executeTokenSwap, calculateSwapFee } from './services/swapService';
 
 // Replace 'bark_telegram_bot_token' with the actual bot token
 const token = 'bark_telegram_bot_token';

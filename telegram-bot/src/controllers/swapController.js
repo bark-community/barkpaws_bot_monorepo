@@ -1,4 +1,3 @@
-const { PublicKey, Transaction, sendAndConfirmTransaction } = require('@solana/web3.js');
 const axios = require('axios');
 
 const initiateTokenSwap = async (req, res) => {
@@ -11,8 +10,8 @@ const initiateTokenSwap = async (req, res) => {
             return res.status(400).json({ message: 'Missing required parameters' });
         }
 
-        // Call Solana token swap API to initiate the swap
-        const swapResponse = await axios.post('https://api.barkpaws.app/swap', {
+        // Call BarkPaws token swap API to initiate the swap
+        const swapResponse = await axios.post(process.env.BARK_SWAP_API, {
             fromToken,
             toToken,
             amount,

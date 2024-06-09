@@ -1,6 +1,7 @@
 const { calculateSwapFee } = require('./utils');
 const { executeTokenSwap } = require('./swapService');
 
+// Function to handle token swap commands/messages
 async function handleTokenSwap(bot, msg, userStates) {
     try {
         const chatId = msg.chat.id;
@@ -40,6 +41,7 @@ async function handleTokenSwap(bot, msg, userStates) {
             }
         }
     } catch (error) {
+        // Handle errors and send error message to the user
         console.error('Error handling token swap:', error);
         bot.sendMessage(msg.chat.id, 'Oops! Something went wrong. Please try again later.');
     }
