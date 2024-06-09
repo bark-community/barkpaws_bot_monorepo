@@ -1,6 +1,6 @@
 {
   "name": "barkpaws_telegram_bot",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "BarkPaws Telegram bot - Enhancing DeFi experience on Solana blockchain",
   "main": "index.js",
   "scripts": {
