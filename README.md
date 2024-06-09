@@ -1,5 +1,7 @@
 # BarkPaws Monorepo
 
+![BarkPaws Logo](./telegram-bot/assets/logo.png)
+
 Welcome to the BarkPaws Monorepo! This repository contains various projects and components related to the BarkPaws ecosystem, including the BarkPaws Telegram Bot, BarkPaws dApp, smart contracts, and more.
 
 ## Projects
