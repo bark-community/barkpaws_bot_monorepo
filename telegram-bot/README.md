@@ -1,4 +1,5 @@
 # BarkPaws Telegram Bot
+**Enhancing DeFi experience on Solana blockchain**
 
 ![BarkPaws Logo](./assets/logo.png)
 
