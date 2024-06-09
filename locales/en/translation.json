@@ -1,0 +1,22 @@
+{
+    "welcome_message": "Welcome to BarkPaws Bot! How can we assist you today?",
+    "initiate_swap": "Initiate Token Swap",
+    "monitor_trade": "Monitor Trade Status",
+    "support": "Support",
+    "settings": "Settings",
+    "resources": "Educational Resources",
+    "stake_tokens": "Stake BARK Tokens",
+    "governance": "Governance",
+    "swap_prompt": "Please provide the following details to initiate a token swap:\n1. Token to Swap From\n2. Token to Swap To\n3. Amount\n4. Confirm Wallet Address",
+    "swap_success": "Swap initiated successfully. Transaction ID: {{txId}}",
+    "swap_failure": "Failed to initiate swap: {{error}}",
+    "status_prompt": "Please enter your Trade ID to check the status:",
+    "status_success": "Trade status: {{status}}",
+    "status_failure": "Failed to check trade status: {{error}}",
+    "support_message": "How can we assist you? Please describe your issue, and our support team will get back to you shortly.",
+    "settings_message": "Settings:\n- Change Language\n- Notification Preferences\n- Security Settings",
+    "resources_message": "Choose a topic to learn more:\n- How to Use BarkPaws Bot\n- Understanding DeFi\n- FAQs",
+    "stake_message": "Enter the amount of BARK Tokens you want to stake:",
+    "governance_message": "View current proposals and vote using your BARK Tokens.",
+    "invalid_input": "Invalid input. Please provide all the necessary details."
+}

@@ -77,7 +77,7 @@ The BarkPaws "BarkSwap" Telegram bot is designed to provide an intuitive and use
     ```
     TELEGRAM_BOT_TOKEN=bark_telegram_bot_token
     MONGO_URI=mongodb://localhost:27017/barkpaws
-    BARK_SWAP_API=https://api-swap.barkpaws.app
+    BARK_DEV_SWAP_API=https://api-dev-swap.barkpaws.app
     SOLANA_TRADE_STATUS_API=https://api.solana.trade/status
     ```
 
