@@ -89,16 +89,24 @@ barkpaws-telegram-bot/
 │   ├── utils/
 │   │   └── helpers.js                 # Utility functions
 │   │
+│   ├── locales/
+│   │   └── en/
+│   │       └── translation.json       # Translation file for English
+│   │
 │   ├── app.js                         # Main application file
-│   └── config.js                      # Configuration file
+│   ├── bot.js                         # Telegram bot setup and logic
+│   ├── config.js                      # Configuration file
+│   ├── database.js                    # Database connection file
 │
-├── node_modules/                      # Dependencies (generated)
+├── assets/
+│   └── logo.png                       # Project logo
 │
-├── .env                                # Environment variables
-├── .gitignore                          # Git ignore file
-├── package.json                        # Project dependencies and scripts
-└── README.md                           # Project documentation
-
+├── .env                               # Environment variables
+├── .gitignore                         # Git ignore file
+├── package.json                       # Project dependencies and scripts
+├── README.md                          # Project documentation
+├── LICENSE                            # License file
+└── CODE_OF_CONDUCT.md                 # Code of conduct file
 
 ### Installation
 
