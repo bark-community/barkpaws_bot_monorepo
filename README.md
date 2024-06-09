@@ -1,6 +1,7 @@
 # BarkPaws Telegram Bot
+Project concept
 
-The BarkPaws Telegram bot is designed to provide an intuitive and user-friendly interface for various functionalities related to decentralized finance (DeFi) on the Solana blockchain. This bot enhances the user experience by simplifying the processes of token swaps, trade monitoring, humanitarian support, fundraising campaigns, donations using BARK tokens, and accessing support. Utilizing the Solana Token-2022 standard, BarkPaws ensures enhanced functionality and security for its users.
+The BarkPaws "BarkSwap" Telegram bot is designed to provide an intuitive and user-friendly interface for various functionalities related to decentralized finance (DeFi) on the Solana blockchain. This bot enhances the user experience by simplifying the processes of token swaps, trade monitoring, humanitarian support, fundraising campaigns, donations using BARK tokens, and accessing support. Utilizing the Solana Token-2022 standard, BarkPaws ensures enhanced functionality and security for its users.
 
 ## Key Features:
 
@@ -25,7 +26,7 @@ The BarkPaws Telegram bot is designed to provide an intuitive and user-friendly 
 - Real-time progress tracking and donor engagement features.
 
 ### Donations with BARK Tokens
-- Facilitate donations using BARK tokens with minimal fees.
+- Facilitate donations using BARK tokens with fees.
 - Secure and transparent donation processes.
 - Integration with various causes and organizations.
 
@@ -38,6 +39,7 @@ The BarkPaws Telegram bot is designed to provide an intuitive and user-friendly 
 - Leveraging Solana Token-2022 standard for improved security.
 - Advanced features such as token locking, multi-signature accounts, and more.
 - Regular security updates and audits to ensure user safety.
+- Develop Factory Program.
 
 ## Benefits of Using BarkPaws
 - **User-Friendly Interface**: Simplifies complex DeFi operations making them accessible to a broader audience.
@@ -57,7 +59,7 @@ The BarkPaws Telegram bot is designed to provide an intuitive and user-friendly 
 
 1. Clone the repository
     ```sh
-    git clone https://github.com/yourusername/barkpaws-telegram-bot.git
+    git clone https://github.com/bark-community/barkpaws-telegram-bot.git
     cd barkpaws-telegram-bot
     ```
 
@@ -66,16 +68,16 @@ The BarkPaws Telegram bot is designed to provide an intuitive and user-friendly 
     npm install
     ```
 
-3. Create a `.env` file with your configuration
+3. Create a `.env` file with configuration
     ```sh
     touch .env
     ```
 
     Add the following variables to your `.env` file:
     ```
-    TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+    TELEGRAM_BOT_TOKEN=bark_telegram_bot_token
     MONGO_URI=mongodb://localhost:27017/barkpaws
-    SOLANA_SWAP_API=https://api.solana.swap
+    BARK_SWAP_API=https://api-swap.barkpaws.app
     SOLANA_TRADE_STATUS_API=https://api.solana.trade/status
     ```
 
