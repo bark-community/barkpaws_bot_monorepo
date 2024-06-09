@@ -1,13 +1,21 @@
 {
-  "name": "barkpaws_telegram_bot-",
+  "name": "barkpaws_telegram_bot",
   "version": "1.0.0",
-  "description": "Project concept",
+  "description": "BarkPaws Telegram bot - Enhancing DeFi experience on Solana blockchain",
   "main": "index.js",
   "scripts": {
     "start": "node bot.js",
+    "start-bot": "node dist/bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "BarkPaws",
+    "Telegram",
+    "bot",
+    "DeFi",
+    "Solana",
+    "blockchain"
+  ],
   "author": "BARK Protocol",
   "license": "MIT",
   "dependencies": {
@@ -16,7 +24,18 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "i18next": "^23.11.5",
-    "node.js": "^0.0.1-security",
+    "node-telegram-bot-api": "^0.66.0",
     "typescript": "^5.4.5"
-  }
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bark-community/barkpaws_telegram_bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bark-community/barkpaws_telegram_bot/issues"
+  },
+  "homepage": "https://github.com/bark-community/barkpaws_telegram_bot#readme"
 }
