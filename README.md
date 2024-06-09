@@ -1,157 +1,50 @@
-# BarkPaws Telegram Bot
-Project concept
+# BarkPaws Monorepo
 
-The BarkPaws "BarkSwap" Telegram bot is designed to provide an intuitive and user-friendly interface for various functionalities related to decentralized finance (DeFi) on the Solana blockchain. This bot enhances the user experience by simplifying the processes of token swaps, trade monitoring, humanitarian support, fundraising campaigns, donations using BARK tokens, and accessing support. Utilizing the Solana Token-2022 standard, BarkPaws ensures enhanced functionality and security for its users.
+Welcome to the BarkPaws Monorepo! This repository contains various projects and components related to the BarkPaws ecosystem, including the BarkPaws Telegram Bot, BarkPaws dApp, smart contracts, and more.
 
-## Key Features:
+## Projects
 
-### Token Swaps
-- Facilitate easy and efficient swapping of tokens on the Solana blockchain.
-- Support for multiple token pairs with real-time price updates.
-- Simple and secure transaction processes.
+### 1. BarkPaws Telegram Bot
 
-### Trade Monitoring
-- Real-time updates on trade statuses.
-- Notifications for completed, pending, or failed transactions.
-- Detailed transaction history and analytics.
+The BarkPaws Telegram Bot provides a user-friendly interface for interacting with various functionalities related to decentralized finance (DeFi) on the Solana blockchain. Users can perform token swaps, monitor trades, access support, and participate in humanitarian aid initiatives directly from their Telegram app.
 
-### Humanitarian Aid Support
-- Platform to support and monitor humanitarian aid initiatives.
-- Integration with various charitable organizations and causes.
-- Transparent tracking of donations and fund utilization.
+[View Telegram Bot Documentation](./telegram-bot/README.md)
 
-### Fundraising Campaigns
-- Tools for launching and managing fundraising campaigns.
-- Support for various campaign types, including emergency relief, development projects, and community initiatives.
-- Real-time progress tracking and donor engagement features.
+### 2. BarkPaws dApp
 
-### Donations with BARK Tokens
-- Facilitate donations using BARK tokens with fees.
-- Secure and transparent donation processes.
-- Integration with various causes and organizations.
+The BarkPaws dApp is a decentralized application built using Next.js and React, providing an intuitive interface for users to interact with the BarkPaws ecosystem. Users can swap tokens, monitor trades, participate in fundraising campaigns, and more, all within a seamless web interface.
 
-### Support and Assistance
-- 24/7 support through the Telegram bot.
-- Automated responses for common queries and issues.
-- Access to a support team for complex problems.
+[View dApp Documentation](./dapp/README.md)
 
-### Enhanced Security and Functionality
-- Leveraging Solana Token-2022 standard for improved security.
-- Advanced features such as token locking, multi-signature accounts, and more.
-- Regular security updates and audits to ensure user safety.
-- Develop Factory Program.
+### 3. BarkPaws Smart Contracts
 
-## Benefits of Using BarkPaws
-- **User-Friendly Interface**: Simplifies complex DeFi operations making them accessible to a broader audience.
-- **Real-Time Updates**: Keeps users informed about their trades, donations, and campaign statuses instantly.
-- **Low Fees**: Cost-effective transactions, especially for donations using BARK tokens.
-- **Transparency**: Clear tracking of funds and donations, ensuring trust and reliability.
-- **Enhanced Security**: Adopting the latest standards and practices to protect user assets and data.
+Smart contracts play a crucial role in the BarkPaws ecosystem by facilitating token swaps, fundraising campaigns, and governance mechanisms. This directory contains the Solidity smart contracts deployed on the Solana blockchain, ensuring transparency, security, and efficiency in various operations.
 
-## Frameworks and Technologies Used
+[View Smart Contracts / Programs Documentation](./smart-contracts/README.md)
 
-- **Node.js**: JavaScript runtime for the server.
-- **Express**: Web framework for Node.js.
-- **Telegram Bot API**: Library for interacting with the Telegram Bot API.
-- **Axios**: Promise-based HTTP client for the browser and Node.js.
-- **MongoDB**: NoSQL database for storing user data and trade histories.
-- **i18next**: Internationalization framework for Node.js applications.
-- **dotenv**: Module for loading environment variables from a `.env` file.
-- **@solana/web3.js**: Solana JavaScript API for interacting with the Solana blockchain.
+## Key Features and Improvements:
+
+- **Enhanced User Experience**: Continuously improving user interfaces and interactions to ensure seamless navigation and engagement.
+- **Optimized Performance**: Regular optimizations and updates to enhance performance, responsiveness, and reliability across all projects.
+- **Advanced Security Measures**: Implementing robust security measures, including code audits, vulnerability assessments, and bug fixes to safeguard user assets and data.
+- **Community Feedback Integration**: Actively soliciting and integrating feedback from the BarkPaws community to prioritize features, address issues, and enhance overall user satisfaction.
+- **Scalability and Interoperability**: Designing projects with scalability and interoperability in mind to accommodate future growth and integration with external platforms and protocols.
+- **Documentation and Support**: Improving documentation and support resources to empower developers and users with comprehensive guides, tutorials, and troubleshooting assistance.
 
 ## Getting Started
 
-### Prerequisites
-- Node.js (v18 or later)
-- MongoDB (v4 or later)
-- Solana CLI
-- Telegram account
+To get started with any project within the BarkPaws Monorepo, follow the specific instructions provided in each project's README.md file. Ensure you have the necessary dependencies installed and configured before proceeding.
 
-### Installation
+## Contributions
 
-1. Clone the repository
-    ```sh
-    git clone https://github.com/bark-community/barkpaws-telegram-bot.git
-    cd barkpaws-telegram-bot
-    ```
+Contributions to the BARK Protocol ecosystem are welcome! Whether you're interested in improving the Telegram bot, enhancing the dApp, optimizing smart contracts, or exploring new features, we encourage you to fork the repository, make your improvements, and create a pull request. Our team will review your contributions promptly.
 
-2. Install dependencies
-    ```sh
-    npm install
-    ```
+For detailed contribution guidelines, refer to each project's respective README.md file.
 
-3. Create a `.env` file with configuration
-    ```sh
-    touch .env
-    ```
+## Support and Feedback
 
-    Add the following variables to your `.env` file:
-    ```
-    TELEGRAM_BOT_TOKEN=bark_telegram_bot_token
-    MONGO_URI=mongodb://localhost:27017/barkpaws
-    BARK_DEV_SWAP_API=https://api-dev-swap.barkpaws.app
-    SOLANA_TRADE_STATUS_API=https://api.solana.trade/status
-    ```
+If you have any questions, feedback, or need assistance with any aspect of the BarkPaws ecosystem, feel free to reach out to us. You can contact us through our official channels or open an issue in the respective project's repository.
 
-4. Set up localization files
-    Create the `locales` directory and add JSON files for each supported language (e.g., `locales/en/translation.json`).
+We appreciate your interest in BarkPaws or BARK Protocol and look forward to building a thriving community together!
 
-    Example `locales/en/translation.json`:
-    ```json
-    {
-        "welcome_message": "Welcome to BarkPaws Bot! How can we assist you today?",
-        "initiate_swap": "Initiate Token Swap",
-        "monitor_trade": "Monitor Trade Status",
-        "support": "Support",
-        "settings": "Settings",
-        "resources": "Educational Resources",
-        "stake_tokens": "Stake BARK Tokens",
-        "governance": "Governance",
-        "swap_prompt": "Please provide the following details to initiate a token swap:\n1. Token to Swap From\n2. Token to Swap To\n3. Amount\n4. Confirm Wallet Address",
-        "swap_success": "Swap initiated successfully. Transaction ID: {{txId}}",
-        "swap_failure": "Failed to initiate swap: {{error}}",
-        "status_prompt": "Please enter your Trade ID to check the status:",
-        "status_success": "Trade status: {{status}}",
-        "status_failure": "Failed to check trade status: {{error}}",
-        "support_message": "How can we assist you? Please describe your issue, and our support team will get back to you shortly.",
-        "settings_message": "Settings:\n- Change Language\n- Notification Preferences\n- Security Settings",
-        "resources_message": "Choose a topic to learn more:\n- How to Use BarkPaws Bot\n- Understanding DeFi\n- FAQs",
-        "stake_message": "Enter the amount of BARK Tokens you want to stake:",
-        "governance_message": "View current proposals and vote using your BARK Tokens.",
-        "invalid_input": "Invalid input. Please provide all the necessary details."
-    }
-    ```
-
-### Running the Bot
-
-1. Ensure MongoDB is running and the `.env` file is properly configured.
-2. Start the bot:
-    ```sh
-    node bot.js
-    ```
-
-## Usage
-
-Interact with the bot on Telegram by sending commands or using the inline menu. Available commands include:
-- `/start` to initiate interaction with the bot.
-- `/swap` to initiate a token swap.
-- `/status` to monitor trade status.
-- `/support` to get support.
-- `/settings` to configure settings.
-- `/resources` to access educational resources.
-- `/stake` to stake BARK Tokens.
-- `/governance` to participate in governance.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and create a pull request with your improvements.
-
-## References
-
-- [Telegram Bot API Documentation](https://core.telegram.org/bots/api): Official documentation for the Telegram Bot API, providing detailed information about available methods and parameters for building Telegram bots.
-- [Solana Documentation](https://docs.solana.com/): Official documentation for the Solana blockchain platform, offering resources for developers to build applications on Solana.
-- [MongoDB Documentation](https://docs.mongodb.com/): Official documentation for MongoDB, providing guidance on installation, setup, and usage of MongoDB database.
-
-## License
-
-MIT License.
+Happy coding!
